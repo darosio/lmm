@@ -1,0 +1,51 @@
+#+TITLE:       Fluorescence ratio
+#+AUTHOR:      
+#+EMAIL:       dan@hunza
+#+DATE:        2017-05-28 Sun
+#+URI:         /blog/%y/%m/%d/fluorescence-ratio
+#+KEYWORDS:    fluorescence, ratio analysis
+#+TAGS:        theory
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Fluorescence quantum yield, bandwidth and ratio
+
+
+#+BEGIN_SRC ipython :session
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sb
+from pandas import DataFrame
+import scipy.stats as stats
+%matplotlib inline
+import warnings
+warnings.filterwarnings("ignore")
+#+END_SRC
+
+#+RESULTS:
+
+:
+** Simulating the statistical distribution of a ratio
+   
+Let us start by generating 1000 pairs for numerator / denominator with 20% error.
+
+#+BEGIN_SRC ipython :session :file fluorescence_ratio/f1.png
+np.random.seed(1000)
+num = np.random.normal(100, 20, size=1000)
+den = np.random.normal(50, 10, size=1000)
+
+df = DataFrame(np.column_stack((num, den)), columns=["numerator", "denominator"])
+sb.jointplot("numerator", "denominator", data=df, kind="reg") #sb.jointplot(x, y, kind="reg")
+#+END_SRC
+
+#+RESULTS:
+
+[[file:fluorescence_ratio/f1.png]]
+
+
+Then we compute the ratio for the 1000 couple of values. Their distribution is
+characterized by a long tail representing overestimated values. The best-fit 
+Gaussian distribution (in red) poorly describes the data.
+
+
+
+ank.eu-publish-dir

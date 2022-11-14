@@ -1,0 +1,16 @@
+#+TITLE: prova
+#+AUTHOR:      
+#+EMAIL:       dan@hunza
+#+DATE:        2017-05-28 Sun
+#+URI:         /blog/%y/%m/%d/fluorescence-ratio
+#+KEYWORDS:    fluorescence, ratio analysis
+#+TAGS:        theory
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: Fluorescence quantum yield, bandwidth and ratio
+
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+no sea takimata sanctus est Lorem ipsum dolor sit amet.
